@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "29156",
 "files": {
+	"/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitattributes",
+		"oF": 0
+		},
 	"/apple-touch-icon-precomposed.png": {
 		"ft": 32768,
 		"iS": 1587,
@@ -2232,6 +2240,17 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"/assets/js/jquery.lazy.plugins.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/jquery.lazy.plugins.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"/assets/js/jquery.marquee.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -3097,6 +3116,25 @@
 		"oA": 0,
 		"oAP": "/index.html",
 		"oF": 0
+		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		}
 	},
 "hooks": [
@@ -3105,7 +3143,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 579477436.28132606,
-	"displayValue": "Symbols Code",
+	"displayValue": "Art-of-symbols-site",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon-precomposed.png",
 	"iconImageWasSetByUser": 0
