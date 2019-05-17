@@ -158,6 +158,9 @@ caption {
 ::selection {
   background: rgba(180, 180, 180, 0.45); }
 
+html {
+  scroll-behavior: smooth; }
+
 html, body {
   width: 100%;
   height: auto;
@@ -196,9 +199,11 @@ a:hover {
       padding: 48px;
       width: 100%; } }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-  .theSymbols {
-    margin-bottom: 48px; } }
+.theSymbols {
+  padding-top: 0; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .theSymbols {
+      margin-bottom: 48px; } }
 
 nav {
   padding: 24px 72px;
@@ -216,10 +221,15 @@ nav {
     nav {
       padding: 48px;
       font-size: 48px; } }
+  nav .navMeta {
+    display: flex;
+    flex-direction: row; }
   nav a {
     text-decoration: none; }
   nav a:hover {
     text-decoration: underline; }
+  nav .toggle-overlay {
+    padding: 0 24px; }
   nav .navSymbols img {
     height: 24px;
     width: auto; }
@@ -336,21 +346,29 @@ video, img {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  margin-bottom: 144px; }
+  margin-bottom: 144px;
+  padding-top: 144px; }
+  .symbol:first-of-type {
+    margin-top: 0;
+    padding-top: 0; }
   @media only screen and (max-width: 1130px) {
     .symbol {
-      margin-bottom: 72px; } }
+      margin-bottom: 72px;
+      padding-top: 72px;
+      margin-top: 72px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .symbol {
       flex-direction: column;
-      margin-bottom: 144px; }
+      margin-bottom: 144px;
+      padding-top: 144px;
+      margin-top: 144px; }
       .symbol:last-of-type {
         margin-bottom: 24px; } }
   .symbol .symbolMedia {
     width: 50vw;
     height: auto;
-    max-width: 90vmin;
-    max-height: 90vmin; }
+    max-width: 80vmin;
+    max-height: 80vmin; }
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
       .symbol .symbolMedia {
         width: 100%;
@@ -375,7 +393,8 @@ video, img {
     .symbol .symbolMeta h1 {
       font-size: 72px;
       font-weight: bold;
-      margin-bottom: 12px; }
+      margin-bottom: 12px;
+      line-height: 1; }
       @media only screen and (max-width: 1130px) {
         .symbol .symbolMeta h1 {
           font-size: 36px; } }
@@ -578,3 +597,21 @@ footer {
 
 .hovering {
   background: url("../img/cursor-hover.svg") center center no-repeat; }
+
+#gridView {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 24px 0;
+  padding-top: 72px;
+  margin-top: -72px;
+  margin-bottom: 36px; }
+  #gridView a {
+    width: 10%;
+    margin-bottom: -5px; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      #gridView a {
+        width: 25%; } }
+  #gridView .symbolMedia:hover {
+    transform: scale(1.1); }
