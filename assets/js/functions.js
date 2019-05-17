@@ -42,7 +42,6 @@ $( document ).ready(function() {
 
 
 
-
   $('.symbolRowLeft').marquee({
     //speed in milliseconds of the marquee
     duration: 20000,
@@ -85,9 +84,11 @@ $( document ).ready(function() {
               })
           })
 
-  $('a, .toggle-overlay, #gridView').hover(function() {
+    $('a, .toggle-overlay, #gridView').hover(function() {
       $('.cursor').toggleClass('hovering');
     });
+
+
 
     var symbolMedia = $('.symbolMedia').clone();
 
@@ -111,10 +112,10 @@ $( document ).ready(function() {
        scrollDirection: 'vertical',
        visibleOnly: true,
        onError: function(element) {
-           console.log('error loading ' + element.data('src'));
+           // console.log('error loading ' + element.data('src'));
        }
    });
 
-   
+
 
 });
