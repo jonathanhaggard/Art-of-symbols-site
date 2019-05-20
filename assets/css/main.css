@@ -163,16 +163,16 @@ html, body {
   height: auto;
   background: white;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  font-size: 24px;
+  font-size: 36px;
   line-height: 1.2;
   cursor: none; }
   @media only screen and (max-width: 1130px) {
     html, body {
-      font-size: 20px; } }
+      font-size: 24px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     html, body {
       flex-direction: column;
-      font-size: 36px; } }
+      font-size: 48px; } }
 
 body {
   overflow-x: hidden; }
@@ -208,6 +208,7 @@ nav {
   justify-content: space-between;
   background: white;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   z-index: 10;
   font-weight: bold; }
@@ -221,18 +222,21 @@ nav {
   nav .navMeta {
     display: flex;
     flex-direction: row; }
+    nav .navMeta a {
+      padding: 0 24px; }
   nav a {
     text-decoration: none; }
   nav a:hover {
     text-decoration: underline; }
-  nav .toggle-overlay {
-    padding: 0 24px; }
   nav .navSymbols img {
-    height: 24px;
+    height: 36px;
     width: auto; }
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
       nav .navSymbols img {
         height: 48px; } }
+    @media only screen and (max-width: 1130px) {
+      nav .navSymbols img {
+        height: 24px; } }
 
 video, img {
   width: 100%; }
@@ -308,28 +312,31 @@ video, img {
 
 .intro {
   display: flex;
-  align-items: flex-start;
-  align-content: flex-start;
-  margin: 36px; }
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 144px 36px; }
   @media only screen and (max-width: 1130px) {
     .intro {
-      margin: 12px; } }
+      margin: 12px;
+      padding: 48px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .intro {
       flex-direction: column;
-      padding: 48px;
+      padding: 144px 48px;
       margin: 0px; } }
   .intro p {
-    width: calc(33% - 72px);
+    width: 50%;
     margin: 36px; }
     @media only screen and (max-width: 1130px) {
       .intro p {
-        width: calc(33% - 12px);
+        width: 50%;
         margin: 12px; } }
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
       .intro p {
         width: 100%;
-        margin: 0 0 36px; } }
+        margin: 0 0 36px;
+        font-size: 48px; } }
   .intro .dateHanger {
     margin-top: 24px;
     text-align: right;
@@ -377,6 +384,7 @@ video, img {
     width: calc(35vw - 72px);
     margin-left: 72px;
     position: sticky;
+    position: -webkit-sticky;
     top: 144px; }
     @media only screen and (max-width: 1130px) {
       .symbol .symbolMeta {
@@ -584,7 +592,6 @@ footer {
   transform: scale(1); }
 
 .cursor {
-  background: url("../img/cursor-normal.svg") center center no-repeat;
   width: 5vmin;
   height: 5vmin;
   position: absolute;
@@ -594,9 +601,24 @@ footer {
   @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .cursor {
       display: none; } }
+  .cursor .cursorimg {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 153.22 153.22' style='enable-background:new 0 0 153.22 153.22;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg%3E%3Cpolygon class='st0' points='57.28,146.78 57.28,72.83 4.99,20.55 20.55,4.99 72.83,57.28 146.78,57.28 146.78,79.28 79.28,79.28 79.28,146.78 '/%3E%3Cpath d='M20.55,9.94l50.84,50.84h71.89v15h-67.5v67.5h-15V71.38L9.94,20.55L20.55,9.94 M20.55,0.04L15.6,4.99L4.99,15.6l-4.95,4.95 l4.95,4.95l48.79,48.79v68.99v7h7h15h7v-7v-60.5h60.5h7v-7v-15v-7h-7H74.28L25.5,4.99L20.55,0.04L20.55,0.04z'/%3E%3C/g%3E%3C/svg%3E");
+    width: 100%;
+    height: 100%; }
 
-.hovering {
-  background: url("../img/cursor-hover.svg") center center no-repeat; }
+@keyframes rotatecursor {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.hovering .cursorimg {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 169.23 169.23' style='enable-background:new 0 0 169.23 169.23;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg%3E%3Cpolygon class='st0' points='73.61,163.12 73.61,111.17 36.88,147.9 21.33,132.34 58.06,95.62 6.11,95.62 6.11,73.61 58.06,73.61 21.33,36.89 36.88,21.33 73.61,58.06 73.61,6.11 95.62,6.11 95.62,58.06 132.34,21.33 147.9,36.89 111.17,73.61 163.11,73.61 163.11,95.62 111.17,95.62 147.9,132.34 132.34,147.9 95.62,111.17 95.62,163.12 '/%3E%3Cpath d='M92.12,9.61v56.89l40.23-40.23l10.61,10.61l-40.23,40.23h56.89v15h-56.89l40.23,40.23l-10.61,10.61l-40.23-40.23v56.89h-15 v-56.89l-40.23,40.23l-10.61-10.61l40.23-40.23H9.61v-15h56.89L26.28,36.89l10.61-10.61l40.23,40.23V9.61H92.12 M99.12,2.61h-7h-15 h-7v7v39.99L41.83,21.33l-4.95-4.95l-4.95,4.95L21.33,31.94l-4.95,4.95l4.95,4.95l28.28,28.28H9.61h-7v7v15v7h7h39.99l-28.28,28.28 l-4.95,4.95l4.95,4.95l10.61,10.61l4.95,4.95l4.95-4.95l28.28-28.28v39.99v7h7h15h7v-7v-39.99l28.28,28.28l4.95,4.95l4.95-4.95 l10.61-10.61l4.95-4.95l-4.95-4.95l-28.28-28.28h39.99h7v-7v-15v-7h-7h-39.99l28.28-28.28l4.95-4.95l-4.95-4.95l-10.61-10.61 l-4.95-4.95l-4.95,4.95L99.12,49.61V9.61V2.61L99.12,2.61z'/%3E%3C/g%3E%3C/svg%3E");
+  position: relative;
+  animation-name: rotatecursor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
 
 #gridView {
   display: flex;
@@ -614,6 +636,10 @@ footer {
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
       #gridView a, #gridView .symbol:first-of-type {
         width: 25%;
+        padding: 0;
+        margin: 0; } }
+    @media only screen and (max-width: 1130px) {
+      #gridView a, #gridView .symbol:first-of-type {
         padding: 0;
         margin: 0; } }
   #gridView .symbol:hover {
