@@ -703,8 +703,8 @@ footer{
   align-items: flex-start;
   align-content: flex-start;
 	padding: $small-spacing 0;
-	padding-top: $base-spacing;
-  margin-top: -$base-spacing;
+	padding-top: 0;
+  margin-top: 0;
 	margin-bottom: $half-spacing;
 
 	a, .symbol:first-of-type{

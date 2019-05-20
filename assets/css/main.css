@@ -626,8 +626,8 @@ footer {
   align-items: flex-start;
   align-content: flex-start;
   padding: 24px 0;
-  padding-top: 72px;
-  margin-top: -72px;
+  padding-top: 0;
+  margin-top: 0;
   margin-bottom: 36px; }
   #gridView a, #gridView .symbol:first-of-type {
     width: 10%;
