@@ -124,7 +124,7 @@ $( document ).ready(function() {
     });
 
 
-
+    $("video")[0].play();
 
   // $('.lazy').Lazy({
   //      // your configuration goes here
