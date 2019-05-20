@@ -126,14 +126,14 @@ $( document ).ready(function() {
 
 
 
-  $('.lazy').Lazy({
-       // your configuration goes here
-       scrollDirection: 'vertical',
-       visibleOnly: true,
-       onError: function(element) {
-           // console.log('error loading ' + element.data('src'));
-       }
-   });
+  // $('.lazy').Lazy({
+  //      // your configuration goes here
+  //      scrollDirection: 'vertical',
+  //      visibleOnly: true,
+  //      onError: function(element) {
+  //          // console.log('error loading ' + element.data('src'));
+  //      }
+  //  });
 
 
 
