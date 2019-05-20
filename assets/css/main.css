@@ -610,6 +610,8 @@ footer {
     padding: 0px; }
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
       #gridView a, #gridView .symbol:first-of-type {
-        width: 25%; } }
+        width: 25%;
+        padding: 0;
+        margin: 0; } }
   #gridView .symbol:hover {
     transform: scale(1.1); }

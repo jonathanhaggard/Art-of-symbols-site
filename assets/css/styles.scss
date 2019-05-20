@@ -681,6 +681,8 @@ footer{
 		and (max-device-width : $mobilemaxwidth)
 		and (-webkit-min-device-pixel-ratio: 2) {
 				width:25%;
+				padding: 0;
+				margin: 0;
 
 		}
 	}
