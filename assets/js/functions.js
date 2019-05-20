@@ -93,23 +93,6 @@ $( document ).ready(function() {
     });
 
 
-    // var symbolMedia = $('.symbolMedia').clone();
-    //
-    //
-    //
-    // $("#gridView").html(symbolMedia);
-    //
-    // $( ".symbolMedia" ).each(function( index ) {
-    //   $( this ).addClass( "symbol-" +index );
-    //
-    //
-    //   $( this ).wrap(function() {
-    //     return "<a href='#symbol-" + index + "'></div>";
-    //   });
-
-    // });
-    //
-
     $( ".theSymbols .symbol" ).each(function( index ) {
       if (index === 0) return;
       $(this).attr('id', "symbol-" + (index + 1));
