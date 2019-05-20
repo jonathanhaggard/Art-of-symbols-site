@@ -356,9 +356,9 @@ video, img {
   @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .symbol {
       flex-direction: column;
-      margin-bottom: 144px;
-      padding-top: 144px;
-      margin-top: 144px; }
+      margin-bottom: 24px;
+      padding-top: 24px;
+      margin-top: 24px; }
       .symbol:last-of-type {
         margin-bottom: 24px; } }
   .symbol .symbolMedia {

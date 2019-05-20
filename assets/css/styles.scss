@@ -305,9 +305,9 @@ video, img{
 	and (max-device-width : $mobilemaxwidth)
 	and (-webkit-min-device-pixel-ratio: 2) {
 			flex-direction: column;
-			margin-bottom: $double-spacing;
-			padding-top: $double-spacing;
-		  margin-top: $double-spacing;
+			margin-bottom: $small-spacing;
+			padding-top: $small-spacing;
+		  margin-top: $small-spacing;
 			&:last-of-type{
 				margin-bottom: $small-spacing;
 			}
