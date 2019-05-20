@@ -591,6 +591,9 @@ footer {
   z-index: 9999;
   transform: translateX(-1vmin) translateY(-1vmin);
   pointer-events: none; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .cursor {
+      display: none; } }
 
 .hovering {
   background: url("../img/cursor-hover.svg") center center no-repeat; }
