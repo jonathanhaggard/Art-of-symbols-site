@@ -158,9 +158,6 @@ caption {
 ::selection {
   background: rgba(180, 180, 180, 0.45); }
 
-html {
-  scroll-behavior: smooth; }
-
 html, body {
   width: 100%;
   height: auto;
@@ -607,11 +604,12 @@ footer {
   padding-top: 72px;
   margin-top: -72px;
   margin-bottom: 36px; }
-  #gridView a {
+  #gridView a, #gridView .symbol:first-of-type {
     width: 10%;
-    margin-bottom: -5px; }
+    margin-bottom: -5px;
+    padding: 0px; }
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-      #gridView a {
+      #gridView a, #gridView .symbol:first-of-type {
         width: 25%; } }
-  #gridView .symbolMedia:hover {
+  #gridView .symbol:hover {
     transform: scale(1.1); }

@@ -74,40 +74,74 @@ $( document ).ready(function() {
   });
 
   $('.toggle-overlay').click(function() {
-      $('.about').toggleClass('open');
-    });
+    $('.about').toggleClass('open');
+  });
+
+
 
     $(document).ready(function(){
-              $("body").mousemove(function(event){
-                  $(".cursor").css("left", event.pageX)
-                  $(".cursor").css("top", event.pageY)
-              })
-          })
+      $("body").mousemove(function(event){
+          $(".cursor").css("left", event.pageX)
+          $(".cursor").css("top", event.pageY)
+      })
+    })
+
+
 
     $('a, .toggle-overlay, #gridView').hover(function() {
       $('.cursor').toggleClass('hovering');
     });
 
 
+    // var symbolMedia = $('.symbolMedia').clone();
+    //
+    //
+    //
+    // $("#gridView").html(symbolMedia);
+    //
+    // $( ".symbolMedia" ).each(function( index ) {
+    //   $( this ).addClass( "symbol-" +index );
+    //
+    //
+    //   $( this ).wrap(function() {
+    //     return "<a href='#symbol-" + index + "'></div>";
+    //   });
 
-    var symbolMedia = $('.symbolMedia').clone();
-
-    $("#gridView").html(symbolMedia);
-
-    $( ".symbolMedia" ).each(function( index ) {
-      $( this ).addClass( "symbol-" +index );
-
-      $( this ).wrap(function() {
-        return "<a href='#symbol-" + index + "'></div>";
-      });
-
-    });
+    // });
+    //
 
     $( ".theSymbols .symbol" ).each(function( index ) {
-      $(this).attr('id', "symbol-" +index);
+      if (index === 0) return;
+      $(this).attr('id', "symbol-" + (index + 1));
     });
 
-    $('.lazy').Lazy({
+    $(document).ready(function () {
+    var $newdiv;
+    for (var i = 1; i < 81; i++) {
+        $newlink = $("<a class='symbol' href='#symbol-"  + i + "'/>");
+        $('#gridView').append($newlink);
+
+        $newimg = $("<img src='assets/symbol/small/" + i + ".jpg'/>");
+        // $('#gridView .symbol').append($newimg);
+
+        $("#gridView .symbol").each( function(index){
+          $(this).append($newimg);
+        });
+
+    }
+    });
+
+    // $("#gridView .symbol").each( function(index){
+    //   $(this).append("<img src='assets/symbol/small/" + index + "'.jpg");
+    // });
+    $("#gridView .symbol").each( function(index){
+      $(this).append("<div></div>");
+    });
+
+
+
+
+  $('.lazy').Lazy({
        // your configuration goes here
        scrollDirection: 'vertical',
        visibleOnly: true,
