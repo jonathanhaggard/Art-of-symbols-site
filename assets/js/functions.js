@@ -102,7 +102,7 @@ $( document ).ready(function() {
 
     $(document).ready(function () {
     var $newdiv;
-    for (var i = 1; i < 81; i++) {
+    for (var i = 1; i < 98; i++) {
         $newlink = $("<a class='symbol' href='#symbol-"  + i + "'/>");
         $('#gridView').append($newlink);
 

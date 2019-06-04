@@ -414,6 +414,7 @@ footer{
 	color: white;
 	padding-bottom: $base-spacing;
 
+
 	@media only screen
 	and (max-width: $desktopsmall) {
 		padding-bottom: $small-spacing;
@@ -541,6 +542,10 @@ footer{
 					width: 100%;
 
 			}
+			a, a:hover{
+				color: white;
+			}
+
 			p{
 				width: calc(100% - 72px);
 				margin-left: $base-spacing;

@@ -514,6 +514,8 @@ footer {
       @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
         footer .footerContent .footerDesc {
           width: 100%; } }
+      footer .footerContent .footerDesc a, footer .footerContent .footerDesc a:hover {
+        color: white; }
       footer .footerContent .footerDesc p {
         width: calc(100% - 72px);
         margin-left: 72px; }
