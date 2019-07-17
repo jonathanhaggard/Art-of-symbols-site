@@ -122,7 +122,7 @@ nav{
 			and (min-device-width : $mobileminwidth)
 			and (max-device-width : $mobilemaxwidth)
 			and (-webkit-min-device-pixel-ratio: 2) {
-					height: $mobile-spacing;
+					height: $half-spacing !important;
 
 			}
 			@media only screen
@@ -542,7 +542,7 @@ footer{
 					width: 100%;
 
 			}
-			a, a:hover{
+			a, a:hover, a:visited{
 				color: white;
 			}
 
@@ -596,6 +596,7 @@ footer{
 	visibility: hidden;
 	z-index: 20;
 	overflow-y: scroll;
+	padding-bottom: 25vh;
 	transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
 	transform-origin: right center;
 	transform: scale(0);
@@ -603,14 +604,14 @@ footer{
 	and (min-device-width : $mobileminwidth)
 	and (max-device-width : $mobilemaxwidth)
 	and (-webkit-min-device-pixel-ratio: 2) {
-			padding-bottom: 0;
+			padding-bottom: 12vmin;
 
 	}
 	nav{
 		background: black !important;
 		color: white;
 	}
-	.emotivelogo, .end{
+	.emotivelogo{
 		width: 25%;
 		margin: 15vmin auto;
 		display: block;
@@ -621,6 +622,10 @@ footer{
 				width: 50%;
 		}
 
+	}
+	.end{
+		width: 36px;
+		margin:0;
 	}
 	.symbolRowLeft{
 		margin-top: $base-spacing;
