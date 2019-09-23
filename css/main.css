@@ -1,0 +1,672 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*! normalize-opentype.css v0.2.4 | MIT License | kennethormandy.com/journal/normalize-opentype-css */
+/**
+ * 1. Inherit style issues with custom selections, per robsterlini.co.uk/journal/opentype-and-selection-dont-mix
+ * 2. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
+ *    Turn off all other ligatures, tabular, lining numerals, and alternates
+      Uses same settings for tables
+ * 3. Hard-codes fallback text selection for issue #18, color is Chrome’s per via http://stackoverflow.com/a/16094931/864799
+ */
+::selection {
+  color: inherit;
+  /* 1. */
+  text-shadow: inherit;
+  /* 2. */
+  background-color: #ACCEF7;
+  /* 3. */ }
+
+html,
+body,
+table {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+  /* 2. */ }
+
+/* Headings
+========================================================================== */
+/**
+ * 1. Turn on discretionary ligatures for larger headings
+ */
+h1,
+h2,
+h3 {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+  /* 1. */ }
+
+/* Text-level semantics
+========================================================================== */
+/**
+ * 1. Change all letters to uppercase
+ * 2. Turn on small caps for upper and lowercase letters
+ */
+abbr {
+  text-transform: uppercase;
+  /* 1 */
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  /* 2 */ }
+
+/*
+ * TODO: Turn on diagonal fractions where appropriate
+ */
+time {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0; }
+
+/*
+ * 1. Turn off kerning and ligatures,
+ *    Turn on lining, tabular numerals, slashed zero
+ */
+pre,
+kbd,
+samp,
+code {
+  font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  /* 1. */ }
+
+/**
+ * 1. Turn on proper supercript numerals
+ */
+sup {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+  /* 1. */ }
+
+/**
+ * 1. Turn on proper subscript numerals
+ */
+sub {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+  /* 1. */ }
+
+/* Grouping content
+========================================================================== */
+/**
+ * TODO: Adds proper bullets
+ */
+/*
+ * TODO:
+ * 1. Adds counters for lists
+ * 2. Use proper numerals for lists
+ */
+/**
+ * Adds proper small caps
+ */
+/**
+ * TODO: scmp, sc2c, pnum, case sensitive forms for postal codes
+ */
+/* Forms
+========================================================================== */
+/**
+ * 1. Turns on lining, proportional numerals without clarified zeroes
+ * TODO: Additional input modes https://developer.mozilla.org/en/docs/Web/HTML/Element/Input#attr-inputmode
+ */
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="range"],
+input[type="tel"],
+input[type="week"] {
+  font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+  /* 1. */ }
+
+/* Localisation
+========================================================================== */
+/* Tables
+========================================================================== */
+/**
+ * 1. Turns on tabular, lining numerals and slashed zero
+ */
+tbody,
+caption {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  /* 1. */ }
+
+* {
+  box-sizing: border-box; }
+
+::selection {
+  background: rgba(180, 180, 180, 0.45); }
+
+html, body {
+  width: 100%;
+  height: auto;
+  background: white;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  cursor: none; }
+  @media only screen and (max-width: 1130px) {
+    html, body {
+      font-size: 24px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    html, body {
+      flex-direction: column;
+      font-size: 48px; } }
+
+body {
+  overflow-x: hidden; }
+
+a, a:visited {
+  color: black;
+  text-decoration: underline;
+  cursor: none; }
+
+a:hover {
+  text-decoration: none;
+  cursor: none; }
+
+.theSymbols, .heroVid {
+  padding: 72px; }
+  @media only screen and (max-width: 1130px) {
+    .theSymbols, .heroVid {
+      padding: 24px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .theSymbols, .heroVid {
+      padding: 48px;
+      width: 100%; } }
+
+.theSymbols {
+  padding-top: 0; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .theSymbols {
+      margin-bottom: 48px; } }
+
+nav {
+  padding: 24px 72px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10;
+  font-weight: bold; }
+  @media only screen and (max-width: 1130px) {
+    nav {
+      padding: 24px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    nav {
+      padding: 48px;
+      font-size: 48px; } }
+  nav .navMeta {
+    display: flex;
+    flex-direction: row; }
+    nav .navMeta a {
+      padding: 0 24px; }
+  nav a {
+    text-decoration: none; }
+  nav a:hover {
+    text-decoration: underline; }
+  nav .navSymbols img {
+    height: 36px;
+    width: auto; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      nav .navSymbols img {
+        height: 36px !important; } }
+    @media only screen and (max-width: 1130px) {
+      nav .navSymbols img {
+        height: 24px; } }
+
+video, img {
+  width: 100%; }
+
+.symbolRowLeft {
+  width: 50%;
+  overflow: hidden; }
+  .symbolRowLeft:before {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+  .symbolRowLeft img {
+    height: 144px;
+    width: auto; }
+    @media only screen and (max-width: 1130px) {
+      .symbolRowLeft img {
+        height: 48px; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      .symbolRowLeft img {
+        flex-direction: column;
+        height: 144px; } }
+
+.symbolRowLeft, .symbolRowRight {
+  position: relative; }
+
+.symbolRowRight {
+  width: 50%;
+  overflow: hidden; }
+  .symbolRowRight img {
+    height: 144px;
+    width: auto; }
+    @media only screen and (max-width: 1130px) {
+      .symbolRowRight img {
+        height: 48px; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      .symbolRowRight img {
+        flex-direction: column;
+        height: 144px; } }
+
+.hero .heroVid video {
+  width: 66vw;
+  box-shadow: -9px 28px 74px -41px rgba(0, 0, 0, 0.25); }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero .heroVid video {
+      width: 100%; } }
+
+.hero h1 {
+  height: 25vw;
+  width: 50%;
+  background: url("../img/symbol-logo-stacked.svg") no-repeat center center;
+  background-size: contain;
+  text-indent: 999999px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -20vh; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero h1 {
+      margin-top: 0vh; } }
+
+.hero .title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+.intro {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 144px 36px; }
+  @media only screen and (max-width: 1130px) {
+    .intro {
+      margin: 12px;
+      padding: 48px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .intro {
+      flex-direction: column;
+      padding: 144px 48px;
+      margin: 0px; } }
+  .intro p {
+    width: 50%;
+    margin: 36px; }
+    @media only screen and (max-width: 1130px) {
+      .intro p {
+        width: 50%;
+        margin: 12px; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      .intro p {
+        width: 100%;
+        margin: 0 0 36px;
+        font-size: 48px; } }
+  .intro .dateHanger {
+    margin-top: 24px;
+    text-align: right;
+    width: 100%;
+    display: block; }
+
+.symbol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-bottom: 144px;
+  padding-top: 144px; }
+  .symbol:first-of-type {
+    margin-top: 0;
+    padding-top: 0; }
+  @media only screen and (max-width: 1130px) {
+    .symbol {
+      margin-bottom: 72px;
+      padding-top: 72px;
+      margin-top: 72px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .symbol {
+      flex-direction: column;
+      margin-bottom: 24px;
+      padding-top: 24px;
+      margin-top: 24px; }
+      .symbol:last-of-type {
+        margin-bottom: 24px; } }
+  .symbol .symbolMedia {
+    width: 50vw;
+    height: auto;
+    max-width: 80vmin;
+    max-height: 80vmin; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      .symbol .symbolMedia {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%; } }
+    .symbol .symbolMedia * {
+      box-shadow: -9px 28px 74px -41px rgba(0, 0, 0, 0.25); }
+  .symbol .symbolMeta {
+    width: calc(35vw - 72px);
+    margin-left: 72px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 144px; }
+    @media only screen and (max-width: 1130px) {
+      .symbol .symbolMeta {
+        margin-left: 24px;
+        width: calc(45vw - 72px); } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      .symbol .symbolMeta {
+        width: 100%;
+        margin: 24px 0 144px;
+        font-size: 48px; } }
+    .symbol .symbolMeta h1 {
+      font-size: 72px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      line-height: 1; }
+      @media only screen and (max-width: 1130px) {
+        .symbol .symbolMeta h1 {
+          font-size: 36px; } }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        .symbol .symbolMeta h1 {
+          flex-direction: column;
+          font-size: 72px; } }
+    .symbol .symbolMeta .instagram {
+      background: url("../img/instagram.svg") center center no-repeat;
+      width: 24px;
+      height: 24px;
+      display: block;
+      background-size: cover;
+      margin-top: 24px; }
+      @media only screen and (max-width: 1130px) {
+        .symbol .symbolMeta .instagram {
+          margin-top: 12px; } }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        .symbol .symbolMeta .instagram {
+          width: 72px;
+          height: 72px;
+          margin-top: 36px; } }
+
+footer {
+  background: black;
+  color: white;
+  padding-bottom: 72px; }
+  @media only screen and (max-width: 1130px) {
+    footer {
+      padding-bottom: 24px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    footer {
+      width: 100%;
+      padding: 144px 0; } }
+  footer .footerHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      footer .footerHeader {
+        flex-direction: column; } }
+    footer .footerHeader a {
+      width: 25%;
+      display: block;
+      padding: 72px; }
+      @media only screen and (max-width: 1130px) {
+        footer .footerHeader a {
+          padding: 24px; } }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        footer .footerHeader a {
+          width: 75%;
+          padding: 0 0 144px 0; } }
+    footer .footerHeader .symbolRowRight {
+      width: 72%;
+      overflow: hidden; }
+      footer .footerHeader .symbolRowRight:before {
+        content: '';
+        display: block;
+        z-index: 10;
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        footer .footerHeader .symbolRowRight {
+          width: 100%;
+          display: none; } }
+      footer .footerHeader .symbolRowRight img {
+        height: 144px;
+        width: auto; }
+        @media only screen and (max-width: 1130px) {
+          footer .footerHeader .symbolRowRight img {
+            height: 48px; } }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+          footer .footerHeader .symbolRowRight img {
+            flex-direction: column;
+            height: 72px; } }
+  footer .footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      footer .footerContent {
+        flex-direction: column; } }
+    footer .footerContent h1 {
+      height: 33vw;
+      width: 50%;
+      background: url("../img/symbol-logo-stacked-white.svg") no-repeat center center;
+      background-size: contain;
+      text-indent: 999999px;
+      overflow: hidden; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        footer .footerContent h1 {
+          width: 100%;
+          height: 60vmin;
+          margin: 144px 0 12px; } }
+    footer .footerContent .footerDesc {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        footer .footerContent .footerDesc {
+          width: 100%; } }
+      footer .footerContent .footerDesc a, footer .footerContent .footerDesc a:hover, footer .footerContent .footerDesc a:visited {
+        color: white; }
+      footer .footerContent .footerDesc p {
+        width: calc(100% - 72px);
+        margin-left: 72px; }
+        @media only screen and (max-width: 1130px) {
+          footer .footerContent .footerDesc p {
+            width: calc(100% - 12px);
+            margin-left: 24px; } }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+          footer .footerContent .footerDesc p {
+            width: calc(100% - 48px);
+            padding: 0 48px 144px 48px; } }
+      footer .footerContent .footerDesc .symbolRowLeft {
+        width: 100%; }
+        footer .footerContent .footerDesc .symbolRowLeft:before {
+          background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+
+.toggle-overlay:hover {
+  text-decoration: underline; }
+
+.about {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 20;
+  overflow-y: scroll;
+  padding-bottom: 25vh;
+  z-index: 900;
+  transition: all 500ms cubic-bezier(1, 0, 0, 1);
+  /* easeInOutExpo */
+  transform-origin: right center;
+  transform: scale(0); }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .about {
+      padding-bottom: 12vmin; } }
+  .about nav {
+    background: black !important;
+    color: white; }
+  .about .emotivelogo {
+    width: 25%;
+    margin: 15vmin auto;
+    display: block; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      .about .emotivelogo {
+        width: 50%; } }
+  .about .end {
+    width: 36px;
+    margin: 0; }
+  .about .symbolRowLeft {
+    margin-top: 72px; }
+    .about .symbolRowLeft:before {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 100%); }
+  .about p {
+    color: white;
+    width: 50%;
+    margin: 0 auto 24px; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      .about p {
+        width: 90%; } }
+    .about p a {
+      color: white; }
+  .about .question {
+    font-weight: bold;
+    margin: 72px auto 24px;
+    color: white;
+    font-size: 36px; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      .about .question {
+        font-size: 48px; } }
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1); }
+
+.cursor {
+  width: 5vmin;
+  height: 5vmin;
+  position: absolute;
+  z-index: 9999;
+  transform: translateX(-1vmin) translateY(-1vmin);
+  pointer-events: none; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .cursor {
+      display: none; } }
+  .cursor .cursorimg {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 153.22 153.22' style='enable-background:new 0 0 153.22 153.22;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg%3E%3Cpolygon class='st0' points='57.28,146.78 57.28,72.83 4.99,20.55 20.55,4.99 72.83,57.28 146.78,57.28 146.78,79.28 79.28,79.28 79.28,146.78 '/%3E%3Cpath d='M20.55,9.94l50.84,50.84h71.89v15h-67.5v67.5h-15V71.38L9.94,20.55L20.55,9.94 M20.55,0.04L15.6,4.99L4.99,15.6l-4.95,4.95 l4.95,4.95l48.79,48.79v68.99v7h7h15h7v-7v-60.5h60.5h7v-7v-15v-7h-7H74.28L25.5,4.99L20.55,0.04L20.55,0.04z'/%3E%3C/g%3E%3C/svg%3E");
+    width: 100%;
+    height: 100%; }
+
+@keyframes rotatecursor {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.hovering .cursorimg {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 169.23 169.23' style='enable-background:new 0 0 169.23 169.23;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg%3E%3Cpolygon class='st0' points='73.61,163.12 73.61,111.17 36.88,147.9 21.33,132.34 58.06,95.62 6.11,95.62 6.11,73.61 58.06,73.61 21.33,36.89 36.88,21.33 73.61,58.06 73.61,6.11 95.62,6.11 95.62,58.06 132.34,21.33 147.9,36.89 111.17,73.61 163.11,73.61 163.11,95.62 111.17,95.62 147.9,132.34 132.34,147.9 95.62,111.17 95.62,163.12 '/%3E%3Cpath d='M92.12,9.61v56.89l40.23-40.23l10.61,10.61l-40.23,40.23h56.89v15h-56.89l40.23,40.23l-10.61,10.61l-40.23-40.23v56.89h-15 v-56.89l-40.23,40.23l-10.61-10.61l40.23-40.23H9.61v-15h56.89L26.28,36.89l10.61-10.61l40.23,40.23V9.61H92.12 M99.12,2.61h-7h-15 h-7v7v39.99L41.83,21.33l-4.95-4.95l-4.95,4.95L21.33,31.94l-4.95,4.95l4.95,4.95l28.28,28.28H9.61h-7v7v15v7h7h39.99l-28.28,28.28 l-4.95,4.95l4.95,4.95l10.61,10.61l4.95,4.95l4.95-4.95l28.28-28.28v39.99v7h7h15h7v-7v-39.99l28.28,28.28l4.95,4.95l4.95-4.95 l10.61-10.61l4.95-4.95l-4.95-4.95l-28.28-28.28h39.99h7v-7v-15v-7h-7h-39.99l28.28-28.28l4.95-4.95l-4.95-4.95l-10.61-10.61 l-4.95-4.95l-4.95,4.95L99.12,49.61V9.61V2.61L99.12,2.61z'/%3E%3C/g%3E%3C/svg%3E");
+  position: relative;
+  animation-name: rotatecursor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+#gridView {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 24px 0;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 36px; }
+  #gridView a, #gridView .symbol:first-of-type {
+    width: 10%;
+    margin-bottom: -5px;
+    padding: 0px; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      #gridView a, #gridView .symbol:first-of-type {
+        width: 25%;
+        padding: 0;
+        margin: 0; } }
+    @media only screen and (max-width: 1130px) {
+      #gridView a, #gridView .symbol:first-of-type {
+        padding: 0;
+        margin: 0; } }
+  #gridView .symbol:hover {
+    transform: scale(1.1); }
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+.pace-inactive {
+  display: none; }
+
+.pace .pace-progress {
+  background: #000;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px; }
