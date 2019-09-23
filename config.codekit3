@@ -2795,6 +2795,14 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/assets/symbol/42.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/symbol/42.mp4",
+		"oF": 0
+		},
 	"/assets/symbol/42.png": {
 		"ft": 32768,
 		"iS": 0,
@@ -2839,6 +2847,14 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/symbol/46.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/symbol/46.mp4",
+		"oF": 0
+		},
 	"/assets/symbol/46.png": {
 		"ft": 32768,
 		"iS": 0,
@@ -2849,6 +2865,14 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/assets/symbol/47.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/symbol/47.mp4",
+		"oF": 0
 		},
 	"/assets/symbol/47.png": {
 		"ft": 32768,
@@ -2861,6 +2885,14 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/symbol/48.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/symbol/48.mp4",
+		"oF": 0
+		},
 	"/assets/symbol/48.png": {
 		"ft": 32768,
 		"iS": 0,
@@ -2871,6 +2903,14 @@
 		"opt": 1,
 		"oT": 1,
 		"q": 100
+		},
+	"/assets/symbol/49.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/symbol/49.mp4",
+		"oF": 0
 		},
 	"/assets/symbol/49.png": {
 		"ft": 32768,

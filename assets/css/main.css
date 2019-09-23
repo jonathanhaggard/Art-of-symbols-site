@@ -550,6 +550,7 @@ footer {
   z-index: 20;
   overflow-y: scroll;
   padding-bottom: 25vh;
+  z-index: 900;
   transition: all 500ms cubic-bezier(1, 0, 0, 1);
   /* easeInOutExpo */
   transform-origin: right center;
