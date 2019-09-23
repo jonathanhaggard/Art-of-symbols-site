@@ -17,6 +17,14 @@
 		"oAP": "/.gitattributes",
 		"oF": 0
 		},
+	"/.htaccess": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.htaccess",
+		"oF": 0
+		},
 	"/apple-touch-icon-precomposed.png": {
 		"ft": 32768,
 		"iS": 1587,
@@ -4665,6 +4673,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/assets/symbolshype.mp4",
+		"oF": 0
+		},
+	"/index-redir.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/index-redir.html",
 		"oF": 0
 		},
 	"/index.html": {
