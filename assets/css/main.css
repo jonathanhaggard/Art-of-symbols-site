@@ -233,7 +233,7 @@ nav {
     width: auto; }
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
       nav .navSymbols img {
-        height: 48px; } }
+        height: 36px !important; } }
     @media only screen and (max-width: 1130px) {
       nav .navSymbols img {
         height: 24px; } }
@@ -514,7 +514,7 @@ footer {
       @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
         footer .footerContent .footerDesc {
           width: 100%; } }
-      footer .footerContent .footerDesc a, footer .footerContent .footerDesc a:hover {
+      footer .footerContent .footerDesc a, footer .footerContent .footerDesc a:hover, footer .footerContent .footerDesc a:visited {
         color: white; }
       footer .footerContent .footerDesc p {
         width: calc(100% - 72px);
@@ -549,23 +549,28 @@ footer {
   visibility: hidden;
   z-index: 20;
   overflow-y: scroll;
+  padding-bottom: 25vh;
+  z-index: 900;
   transition: all 500ms cubic-bezier(1, 0, 0, 1);
   /* easeInOutExpo */
   transform-origin: right center;
   transform: scale(0); }
   @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .about {
-      padding-bottom: 0; } }
+      padding-bottom: 12vmin; } }
   .about nav {
     background: black !important;
     color: white; }
-  .about .emotivelogo, .about .end {
+  .about .emotivelogo {
     width: 25%;
     margin: 15vmin auto;
     display: block; }
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-      .about .emotivelogo, .about .end {
+      .about .emotivelogo {
         width: 50%; } }
+  .about .end {
+    width: 36px;
+    margin: 0; }
   .about .symbolRowLeft {
     margin-top: 72px; }
     .about .symbolRowLeft:before {
